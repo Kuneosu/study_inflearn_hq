@@ -130,3 +130,17 @@
   - Bold와 Regular 두 가지 weight를 기준으로 명확한 크기 체계를 구축
   - 재사용 가능한 스타일 상수를 통해 일관된 타이포그래피 유지
 
+0. 강의 : 05 폰트 설정
+1. 내용:
+- google_fonts 패키지 추가 및 설정
+  - pubspec.yaml에 google_fonts: ^6.2.1 의존성 추가
+  - TextStyles 클래스의 모든 텍스트 스타일을 GoogleFonts.poppins로 변경
+  - const 제거 및 정적 TextStyle 객체로 변환
+
+2. 학습 내용 및 인사이트:
+- **구글 폰트 적용**: 
+  - GoogleFonts 패키지를 통해 Poppins 폰트를 앱 전체에 적용
+  - 웹 폰트를 사용함으로써 앱 크기를 줄이고 폰트 관리를 간소화
+- **정적 스타일 관리**: 
+  - const 대신 정적 TextStyle 객체를 사용하여 GoogleFonts와 호환되는 구조로 변경
+  - 일관된 폰트 스타일을 유지하면서도 동적인 폰트 적용이 가능해짐
