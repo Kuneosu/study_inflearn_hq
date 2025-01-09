@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/big_button.dart';
+import 'package:inflearn_flutter_hq/core/presentation/components/filter_button.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/input_field.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/medium_button.dart';
+import 'package:inflearn_flutter_hq/core/presentation/components/rating_button.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/small_button.dart';
 import 'package:inflearn_flutter_hq/ui/text_styles.dart';
 
@@ -62,6 +64,10 @@ class App extends StatelessWidget {
           ),
           SizedBox(height: 20,),
           InputField(label: 'label', placeHolder: 'placeHolder'),
+          FilterButton('true',isSelected: true,),
+          FilterButton('false',isSelected: false,),
+          RatingButton('true',isSelected: true,),
+          RatingButton('false',isSelected: false,),
         ],
       ),
     );
