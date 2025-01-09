@@ -144,3 +144,10 @@
 - **정적 스타일 관리**: 
   - const 대신 정적 TextStyle 객체를 사용하여 GoogleFonts와 호환되는 구조로 변경
   - 일관된 폰트 스타일을 유지하면서도 동적인 폰트 적용이 가능해짐
+
+### 2025-01-09
+0. 강의 : 06-0 [UI 심화] UI 작성시 실수하는 것
+1. 내용:
+- Component를 만들 때 onTap 이벤트를 Component 내부에 만들지 말 것
+- VoidCallBack을 매개변수로 넘겨 받아 onTap 이벤트를 처리할 것
+- Component는 순수하게 Component 자체로 재사용 가능한 형태로 작성할 것
