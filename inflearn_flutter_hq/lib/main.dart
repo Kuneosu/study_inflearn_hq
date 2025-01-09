@@ -6,6 +6,7 @@ import 'package:inflearn_flutter_hq/core/presentation/components/medium_button.d
 import 'package:inflearn_flutter_hq/core/presentation/components/rating_button.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/small_button.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/two_tabs.dart';
+import 'package:inflearn_flutter_hq/core/presentation/dialogs/rating_dialog.dart';
 import 'package:inflearn_flutter_hq/ui/text_styles.dart';
 
 void main() {
@@ -46,7 +47,15 @@ class App extends StatelessWidget {
           BigButton(
             "Big Button",
             onPressed: () {
-              debugPrint("big button");
+              showDialog(
+                  context: context,
+                  builder: (_) {
+                    return RatingDialog(
+                        title: 'Rate Recipe',
+                        rate: 3,
+                        buttonText: 'buttonText',
+                        onChange: (_) {});
+                  });
             },
           ),
           SizedBox(
@@ -90,9 +99,7 @@ class App extends StatelessWidget {
           TwoTabs(
             labels: ['label1', 'label2'],
             selectedIndex: 1,
-            onChange: (index) => {
-              debugPrint('index = $index')
-            },
+            onChange: (index) => {debugPrint('index = $index')},
           ),
         ],
       ),
