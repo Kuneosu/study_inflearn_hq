@@ -46,8 +46,7 @@ class TwoTabs extends StatelessWidget {
                   )
                 : _UnselectedTab(
                     text: labels[1],
-                  
-            ),
+                  ),
           ),
         ),
       ],

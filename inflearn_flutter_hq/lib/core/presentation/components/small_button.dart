@@ -5,10 +5,15 @@ import 'package:inflearn_flutter_hq/ui/text_styles.dart';
 class SmallButton extends StatefulWidget {
   final String text;
   final void Function() onPressed;
+  final Color color;
+  final double fontSize;
+
   const SmallButton(
     this.text, {
     super.key,
     required this.onPressed,
+    this.color = ColorStyles.primary100,
+    this.fontSize = 16,
   });
 
   @override
@@ -39,7 +44,7 @@ class _SmallButtonState extends State<SmallButton> {
       child: Container(
         height: 37,
         decoration: BoxDecoration(
-          color: isPressed ? ColorStyles.gray4 : ColorStyles.primary100,
+          color: isPressed ? ColorStyles.gray4 : widget.color,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
@@ -47,7 +52,10 @@ class _SmallButtonState extends State<SmallButton> {
           children: [
             Text(
               widget.text,
-              style: TextStyles.normalTextBold.copyWith(color: Colors.white),
+              style: TextStyles.normalTextBold.copyWith(
+                color: Colors.white,
+                fontSize: widget.fontSize,
+              ),
             ),
           ],
         ),
