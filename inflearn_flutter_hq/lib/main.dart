@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:inflearn_flutter_hq/core/presentation/components/big_button.dart';
+import 'package:inflearn_flutter_hq/core/presentation/components/medium_button.dart';
+import 'package:inflearn_flutter_hq/core/presentation/components/small_button.dart';
 import 'package:inflearn_flutter_hq/ui/text_styles.dart';
 
 void main() {
@@ -27,13 +30,36 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Center(
-        child: Text(
-          'Hello World',
-          style: TextStyles.titleTextBold.copyWith(color: Colors.black),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Components",
+          style: TextStyles.largeTextBold,
         ),
+      ),
+      body: ListView(
+        children: [
+          BigButton(
+            "Big Button",
+            onPressed: (){
+              debugPrint("big button");
+            },
+          ),
+          SizedBox(height: 20,),
+          MediumButton(
+            "Medium",
+            onPressed: (){
+              debugPrint("me button");
+            },
+          ),
+          SizedBox(height: 20,),
+          SmallButton(
+            "Small",
+            onPressed: (){
+              debugPrint("sm button");
+            },
+          ),
+        ],
       ),
     );
   }
