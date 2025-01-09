@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/big_button.dart';
+import 'package:inflearn_flutter_hq/core/presentation/components/input_field.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/medium_button.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/small_button.dart';
 import 'package:inflearn_flutter_hq/ui/text_styles.dart';
@@ -59,6 +60,8 @@ class App extends StatelessWidget {
               debugPrint("sm button");
             },
           ),
+          SizedBox(height: 20,),
+          InputField(label: 'label', placeHolder: 'placeHolder'),
         ],
       ),
     );
