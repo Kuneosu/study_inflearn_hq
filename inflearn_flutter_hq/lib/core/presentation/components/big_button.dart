@@ -52,9 +52,6 @@ class _BigButtonState extends State<BigButton> {
                 style: TextStyles.normalTextBold.copyWith(color: Colors.white),
               ),
             ),
-            SizedBox(
-              width: 11,
-            ),
             const Icon(
               Icons.arrow_forward,
               color: Colors.white,

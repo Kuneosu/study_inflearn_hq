@@ -7,6 +7,7 @@ import 'package:inflearn_flutter_hq/core/presentation/components/rating_button.d
 import 'package:inflearn_flutter_hq/core/presentation/components/small_button.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/two_tabs.dart';
 import 'package:inflearn_flutter_hq/core/presentation/dialogs/rating_dialog.dart';
+import 'package:inflearn_flutter_hq/presentation/sign_in/sign_in_screen.dart';
 import 'package:inflearn_flutter_hq/ui/text_styles.dart';
 
 void main() {
@@ -42,67 +43,7 @@ class App extends StatelessWidget {
           style: TextStyles.largeTextBold,
         ),
       ),
-      body: ListView(
-        children: [
-          BigButton(
-            "Big Button",
-            onPressed: () {
-              showDialog(
-                  context: context,
-                  builder: (_) {
-                    return RatingDialog(
-                        title: 'Rate Recipe',
-                        rate: 3,
-                        buttonText: 'buttonText',
-                        onChange: (_) {});
-                  });
-            },
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          MediumButton(
-            "Medium",
-            onPressed: () {
-              debugPrint("me button");
-            },
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          SmallButton(
-            "Small",
-            onPressed: () {
-              debugPrint("sm button");
-            },
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          InputField(label: 'label', placeHolder: 'placeHolder'),
-          FilterButton(
-            'true',
-            isSelected: true,
-          ),
-          FilterButton(
-            'false',
-            isSelected: false,
-          ),
-          RatingButton(
-            'true',
-            isSelected: true,
-          ),
-          RatingButton(
-            'false',
-            isSelected: false,
-          ),
-          TwoTabs(
-            labels: ['label1', 'label2'],
-            selectedIndex: 1,
-            onChange: (index) => {debugPrint('index = $index')},
-          ),
-        ],
-      ),
+      body: SignInScreen(),
     );
   }
 }
