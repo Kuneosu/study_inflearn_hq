@@ -1,7 +1,7 @@
 import 'package:inflearn_flutter_hq/domain/repository/bookmark_repository.dart';
 
 class MockBookmarkRepositoryImpl implements BookmarkRepository {
-final _ids = <int>{2,4};
+  final _ids = <int>{2, 4, 6, 8, 10};
 
   @override
   Future<void> clear() async {
@@ -31,5 +31,4 @@ final _ids = <int>{2,4};
   Future<void> unSave(int id) async {
     _ids.remove(id);
   }
-
 }

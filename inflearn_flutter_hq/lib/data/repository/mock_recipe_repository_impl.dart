@@ -313,6 +313,7 @@ class MockRecipeRepositoryImpl implements RecipeRepository {
 
   @override
   Future<List<Recipe>> getRecipes() async {
+    await Future.delayed(const Duration(seconds: 1));
     final recipes = _mockRecipes['recipes']!;
     return recipes.map((e) => Recipe.fromJson(e)).toList();
   }

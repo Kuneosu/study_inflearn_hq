@@ -15,6 +15,6 @@ class GetSavedRecipesUseCase {
   Future<List<Recipe>> execute() async {
     final ids = await _bookmarkRepository.getBookmarkIds();
     final recipes = await _recipeRepository.getRecipes();
-    return recipes.where((e)=> ids.contains(e.id)).toList();
+    return recipes.where((e) => ids.contains(e.id)).toList();
   }
 }
