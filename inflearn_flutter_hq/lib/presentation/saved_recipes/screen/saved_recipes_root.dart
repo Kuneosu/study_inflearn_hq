@@ -22,12 +22,13 @@ class SavedRecipesRoot extends StatelessWidget {
     return ListenableBuilder(
       listenable: viewModel,
       builder: (context, _) {
-        if (viewModel.isLoading) {
+        final state = viewModel.state;
+        if (state.isLoading) {
           return const Center(
             child: CircularProgressIndicator(),
           );
         }
-        return SavedRecipesScreen(recipes: viewModel.recipes);
+        return SavedRecipesScreen(recipes: state.recipes);
       },
     );
   }
