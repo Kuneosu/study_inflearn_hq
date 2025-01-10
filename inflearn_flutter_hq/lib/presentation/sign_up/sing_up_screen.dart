@@ -5,7 +5,10 @@ import 'package:inflearn_flutter_hq/ui/color_styles.dart';
 import 'package:inflearn_flutter_hq/ui/text_styles.dart';
 
 class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+  final VoidCallback onSignIn;
+
+
+  const SignUpScreen({super.key, required this.onSignIn});
 
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();
@@ -133,10 +136,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       'Already a member? ',
                       style: TextStyles.smallerTextBold,
                     ),
-                    Text(
-                      'Sign In',
-                      style: TextStyles.smallerTextBold.copyWith(
-                        color: ColorStyles.secondary100,
+                    GestureDetector(
+                      onTap: widget.onSignIn,
+                      child: Text(
+                        'Sign In',
+                        style: TextStyles.smallerTextBold.copyWith(
+                          color: ColorStyles.secondary100,
+                        ),
                       ),
                     ),
                   ],
