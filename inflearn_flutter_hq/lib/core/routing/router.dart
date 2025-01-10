@@ -6,18 +6,26 @@ import 'package:inflearn_flutter_hq/domain/model/recipe.dart';
 import 'package:inflearn_flutter_hq/domain/use_case/get_saved_recipes_use_case.dart';
 import 'package:inflearn_flutter_hq/presentation/saved_recipes/saved_recipes_screen.dart';
 import 'package:inflearn_flutter_hq/presentation/sign_in/sign_in_screen.dart';
+import 'package:inflearn_flutter_hq/presentation/sign_up/sing_up_screen.dart';
 import 'package:inflearn_flutter_hq/presentation/splash/splash_screen.dart';
 
 final router = GoRouter(
-  initialLocation: '/Splash',
+  // initialLocation: '/Splash',
+  initialLocation: '/SignUp',
   routes: [
     GoRoute(
       path: '/Splash',
-      builder: (context, state) => const SplashScreen(),
+      builder: (context, state) => SplashScreen(
+        onStartCooking: () => context.go('/SignIn'),
+      ),
     ),
     GoRoute(
       path: '/SignIn',
       builder: (context, state) => const SignInScreen(),
+    ),
+    GoRoute(
+      path: '/SignUp',
+      builder: (context, state) => const SignUpScreen(),
     ),
     GoRoute(
       path: '/SavedRecipes',

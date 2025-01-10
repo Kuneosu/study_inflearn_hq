@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:inflearn_flutter_hq/core/presentation/components/medium_button.dart';
 import 'package:inflearn_flutter_hq/ui/color_styles.dart';
 import 'package:inflearn_flutter_hq/ui/text_styles.dart';
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+  final VoidCallback onStartCooking;
+
+  const SplashScreen({
+    super.key,
+    required this.onStartCooking,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -61,9 +65,7 @@ class SplashScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 66),
                 child: MediumButton(
                   'Start Cooking',
-                  onPressed: () {
-                    context.go('/SignIn');
-                  },
+                  onPressed: onStartCooking,
                 ),
               ),
               SizedBox(
