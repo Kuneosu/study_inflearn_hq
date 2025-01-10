@@ -1,10 +1,11 @@
 import 'package:go_router/go_router.dart';
 import 'package:inflearn_flutter_hq/core/routing/route_paths.dart';
-import 'package:inflearn_flutter_hq/presentation/home/home_screen.dart';
+import 'package:inflearn_flutter_hq/presentation/home/home_root.dart';
 import 'package:inflearn_flutter_hq/presentation/main/main_screen.dart';
 import 'package:inflearn_flutter_hq/presentation/notifications/notifications_screen.dart';
 import 'package:inflearn_flutter_hq/presentation/profile/profile_screen.dart';
 import 'package:inflearn_flutter_hq/presentation/saved_recipes/screen/saved_recipes_root.dart';
+import 'package:inflearn_flutter_hq/presentation/search/search_screen.dart';
 import 'package:inflearn_flutter_hq/presentation/sign_in/sign_in_screen.dart';
 import 'package:inflearn_flutter_hq/presentation/sign_up/sing_up_screen.dart';
 import 'package:inflearn_flutter_hq/presentation/splash/splash_screen.dart';
@@ -31,6 +32,10 @@ final router = GoRouter(
         onSignIn: () => context.go(RoutePaths.signIn),
       ),
     ),
+    GoRoute(
+      path: RoutePaths.search,
+      builder: (context, state) => SearchScreen(),
+    ),
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
         return MainScreen(
@@ -49,10 +54,8 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: RoutePaths.home,
-              builder: (context, state) => HomeScreen(
-                name: 'Jega',
-              ),
-            ),
+              builder: (context, state) => HomeRoot(),
+            ),            
           ],
         ),
         StatefulShellBranch(
