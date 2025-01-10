@@ -28,4 +28,3 @@ class RecipeIngredient {
     return 'IngredientItem(ingredient: $ingredient, amount: $amount)';
   }
 }
-

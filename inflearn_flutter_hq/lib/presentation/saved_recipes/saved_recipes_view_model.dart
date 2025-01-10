@@ -8,7 +8,7 @@ class SavedRecipesViewModel with ChangeNotifier {
   SavedRecipesState _state = SavedRecipesState();
 
   SavedRecipesState get state => _state;
-  
+
   SavedRecipesViewModel(
       {required GetSavedRecipesUseCase getSavedRecipesUseCase})
       : _getSavedRecipesUseCase = getSavedRecipesUseCase {

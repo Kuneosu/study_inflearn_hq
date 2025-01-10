@@ -54,4 +54,3 @@ class Recipe {
     return 'Recipe(id: $id, category: $category, name: $name, chef: $chef, time: $time, rating: $rating, ingredients: $ingredients)';
   }
 }
-

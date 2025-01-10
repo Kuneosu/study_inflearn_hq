@@ -8,7 +8,8 @@ class SignInScreen extends StatelessWidget {
   final VoidCallback onSignUp;
   final VoidCallback onSignIn;
 
-  const SignInScreen({super.key, required this.onSignUp, required this.onSignIn});
+  const SignInScreen(
+      {super.key, required this.onSignUp, required this.onSignIn});
 
   @override
   Widget build(BuildContext context) {

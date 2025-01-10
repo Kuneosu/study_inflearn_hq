@@ -7,7 +7,6 @@ import 'package:inflearn_flutter_hq/ui/text_styles.dart';
 class SignUpScreen extends StatefulWidget {
   final VoidCallback onSignIn;
 
-
   const SignUpScreen({super.key, required this.onSignIn});
 
   @override

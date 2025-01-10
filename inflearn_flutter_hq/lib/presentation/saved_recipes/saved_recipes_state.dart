@@ -1,21 +1,14 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:inflearn_flutter_hq/domain/model/recipe.dart';
 
-class SavedRecipesState {
-  List<Recipe> recipes;
-  final bool isLoading;
+part 'saved_recipes_state.freezed.dart';
 
-  SavedRecipesState({
-    this.recipes = const [],
-    this.isLoading = false,
-  });
-
-  SavedRecipesState copyWith({
-    List<Recipe>? recipes,
-    bool? isLoading,
-  }) {
-    return SavedRecipesState(
-      recipes: recipes ?? this.recipes,
-      isLoading: isLoading ?? this.isLoading,
-    );
-  }
+@freezed
+class SavedRecipesState with _$SavedRecipesState {
+  const factory SavedRecipesState({
+    @Default([]) List<Recipe> recipes,
+    @Default(false) bool isLoading,
+  }) = _SavedRecipesState;
+  
 }
+
