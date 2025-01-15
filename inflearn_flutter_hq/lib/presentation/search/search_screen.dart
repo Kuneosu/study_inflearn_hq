@@ -55,7 +55,7 @@ class SearchScreen extends StatelessWidget {
               child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2),
-                      itemCount: 20,
+                  itemCount: 20,
                   itemBuilder: (context, index) {
                     return Text('$index');
                   }),
